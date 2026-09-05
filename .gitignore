@@ -1,0 +1,24 @@
+# Neovim-generated files
+*.swp
+*.swo
+*.swn
+*.un~
+*.tmp
+*.bak
+*~
+
+# Neovim logs and local state
+*.log
+shada/
+swap/
+backup/
+undo/
+session/
+
+# Local Neovim configuration
+.neoconf.json
+
+# OS/editor metadata
+.DS_Store
+Thumbs.db
+

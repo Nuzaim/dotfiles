@@ -1,0 +1,2 @@
+- When I give you tasks, do not make changes that could are very fragile(easily break when new changes are done).
+- Look into how people are normally doing(standard way to do the changes).
