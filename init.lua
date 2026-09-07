@@ -22,6 +22,10 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selected lines" })
 vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Dedent selected lines" })
+vim.keymap.set("n", "<leader>uw", function()
+  vim.opt.wrap = not vim.opt.wrap:get()
+  vim.opt.linebreak = vim.opt.wrap:get()
+end, { desc = "Toggle word wrap" })
 
 local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
