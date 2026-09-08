@@ -1,4 +1,4 @@
-# Neovim-generated files
+# Editor-generated files
 *.swp
 *.swo
 *.swn
@@ -7,7 +7,7 @@
 *.bak
 *~
 
-# Neovim logs and local state
+# Logs and local state
 *.log
 shada/
 swap/
@@ -21,4 +21,3 @@ session/
 # OS/editor metadata
 .DS_Store
 Thumbs.db
-

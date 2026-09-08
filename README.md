@@ -1,37 +1,44 @@
 # Dotfiles
 
-Personal application configurations managed as GNU Stow packages.
+Personal configuration files mirrored under `home/` and linked into the home
+directory by `install.sh`. The paths to install are listed in `links.txt`.
 
-## Requirements
+## Install
 
-- Git
-- GNU Stow
-
-## Neovim
-
-From this repository's root, apply the Neovim configuration with:
+Run this from the repository root:
 
 ```sh
-stow --target="$HOME" nvim
+./install.sh
 ```
 
-This creates `~/.config/nvim` as a link to `nvim/.config/nvim` in this repository.
+Existing files are never overwritten. If a target path already exists, it is
+moved to `~/.dotfiles-backup/` before the repository link is created.
 
-To remove the package from the home directory:
+For a new machine, run:
 
 ```sh
-stow --target="$HOME" --delete nvim
+./bootstrap.sh
 ```
 
-## Adding another application
+The bootstrap script checks the basic prerequisites and then runs the installer.
 
-Each application should be a separate Stow package. Mirror the paths it needs
-under the package directory, then apply it from the repository root. For
-example, a future tmux package can contain `tmux/.tmux.conf`, and a future
-Git package can contain `git/.config/git/config`.
+## Layout
 
-Preview changes before applying them with:
+The `home/` directory mirrors `$HOME`:
 
-```sh
-stow --target="$HOME" --simulate --verbose nvim
+```text
+home/
+├── .zshrc
+├── .bashrc
+├── .gitconfig
+├── .vimrc
+└── .config/
+    ├── nvim/
+    ├── starship.toml
+    └── tmux/
 ```
+
+Only paths listed in `links.txt` are linked. Each entry is relative to `home/`
+and may refer to either a file or a directory. Blank lines and lines beginning
+with `#` are ignored. Future applications can be added by placing their files
+under `home/` and adding the relative path to `links.txt`.
