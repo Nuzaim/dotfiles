@@ -7,6 +7,7 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.opt.scrolloff = 4
 vim.opt.wrap = false
+vim.opt.fillchars:append({ eob = " " })
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.undofile = true
