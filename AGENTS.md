@@ -1,2 +1,3 @@
 - When I give you tasks, do not make changes that could are very fragile(easily break when new changes are done).
 - Look into how people are normally doing(standard way to do the changes).
+- When configs for new applications are added, add their config directory or file location in links.txt. Prefer config directory above individual file locations.
