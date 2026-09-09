@@ -16,6 +16,11 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   opts = {
+    filesystem = {
+      follow_current_file = {
+        enabled = true,
+      },
+    },
     window = {
       position = "left",
       width = 30,
