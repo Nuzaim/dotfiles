@@ -29,6 +29,9 @@ vim.keymap.set("n", "<leader>uw", function()
   vim.opt.wrap = not vim.opt.wrap:get()
   vim.opt.linebreak = vim.opt.wrap:get()
 end, { desc = "Toggle word wrap" })
+vim.keymap.set("n", "<leader>us", function()
+  vim.wo.spell = not vim.wo.spell
+end, { desc = "Toggle spell checking" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking text",

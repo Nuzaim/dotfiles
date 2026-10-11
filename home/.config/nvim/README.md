@@ -8,6 +8,8 @@ Telescope search mappings:
 - `<leader>ff`: find files
 - `<leader>fg`: search words across the project
 - `<leader>fw`: search for the word under the cursor
+- `<leader>us`: toggle spell checking in the current window
+- `<leader>ss`: show spelling suggestions for the word under the cursor
 
 Python language support uses Pyright, installed automatically through Mason.
 Requires Neovim 0.11 or newer and Node.js/npm. Restart Neovim after adding the
