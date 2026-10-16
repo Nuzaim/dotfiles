@@ -5,7 +5,7 @@ return {
     "neovim/nvim-lspconfig",
   },
   opts = {
-    ensure_installed = { "pyright" },
-    automatic_enable = { "pyright" },
+    ensure_installed = { "pyright", "gopls" },
+    automatic_enable = { "pyright", "gopls" },
   },
 }
