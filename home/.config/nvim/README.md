@@ -19,4 +19,5 @@ LSP status.
 
 Neovim's built-in LSP mappings include `K` for hover, `grn` for rename, `grr`
 for references, and `gra` for code actions. Use `<C-x><C-o>` in insert mode for
-LSP completion and `[d`/`]d` to move between diagnostics.
+LSP completion, `<leader>f` to open line diagnostics (showing their source when
+multiple sources report messages), and `[d`/`]d` to move between diagnostics.
